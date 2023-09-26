@@ -5,6 +5,11 @@ from jupyter_client.kernelspec import NATIVE_KERNEL_NAME
 from pydantic import BaseModel, Field
 
 
+class NewPageRequest(BaseModel):
+    page_title: str
+    page_content: str
+
+
 class RunCellRequest(BaseModel):
     """A request to run a cell in the notebook."""
 
@@ -71,4 +76,10 @@ class CreateKernelRequest(BaseModel):
 class CreateKernelResponse(BaseModel):
     kernel_id: str = Field(
         description="The ID of the kernel, to use for future requests related to this kernel such as running cells."
+    )
+
+
+class CreatePageResponse(BaseModel):
+    page_id: str = Field(
+        description="The ID of the page, to use for future requests related to this page such as editing this page."
     )
