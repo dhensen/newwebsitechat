@@ -28,7 +28,9 @@ class Settings(BaseSettings):
     jwks_url: str
     jwks_cache_time_sec: int = 300
 
-    oauth_audience: str = "https://example.com/jupychat"
+    oauth_audience: str
+
+    contact_email: str
 
     jupyter_connection_dir: str = "/tmp/jupychat_connection_files"
 

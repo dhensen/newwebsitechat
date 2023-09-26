@@ -2,7 +2,7 @@ schema_version: v1
 name_for_human: JupyChat
 name_for_model: jupychat
 logo_url: {{ LOGO_URL }}
-contact_email: dev.tizz98@gmail.com
+contact_email: {{ CONTACT_EMAIL }}
 legal_info_url: https://github.com/tizz98/chatgpt-notebook-plugin/issues
 
 api:

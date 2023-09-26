@@ -27,6 +27,7 @@ def get_ai_plugin_json(
         "OPENAI_VERIFICATION_TOKEN": settings.openai_verification_token,
         "LOGO_URL": settings.logo_url,
         "user_is_authenticated": user_is_authenticated,
+        "CONTACT_EMAIL": settings.contact_email,
     }
     rendered_template = template.render(**template_context)
     return yaml.safe_load(rendered_template)
